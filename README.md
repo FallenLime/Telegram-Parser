@@ -15,6 +15,7 @@ tg_parser/
 ├── sender.py        # Sending to destination: creating topics, forwarding media
 ├── config.py        # Configuration and synchronization state
 ├── ui.py            # Terminal interface (Rich)
+├── i18n.py          # Language changing core
 ├── requirements.txt # Dependencies
 └── README.md        # This instruction
 ```
