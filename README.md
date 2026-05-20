@@ -126,6 +126,7 @@ Progress is stored in `sync_states/<src_id>_to_<dst_id>.json`.
 | Copy videos | Download and forward videos | Yes |
 | Copy documents | Download and forward files | Yes |
 | Max file size | Skip files larger than N MB | 500 MB |
+| Media temp dir | Temporary media folder | "tmp_media" |
 | Delay between messages | Anti-flood pause (seconds) | 1.5 |
 | Delay after media | Pause after large files (seconds) | 2.5 |
 | Delay when creating topics | Anti-flood pause when creating topics | 3.0 |
@@ -136,10 +137,15 @@ Progress is stored in `sync_states/<src_id>_to_<dst_id>.json`.
 | Preserve reply chains | Restore replies to copied messages | Yes |
 | Hide regular chats | Do not show regular groups/legacy chats in the list | Yes |
 | Stealth mode | Do not catch updates or receive incoming events | Yes |
+| Сopy general topic | Copy messages from the General Chat thread | Yes |
 | Dry-run | Preview: count without actual sending | No |
 | Parallel media downloading | How many files in an album to download simultaneously | 2 |
 | Pipeline buffer | How many items to prepare ahead | 3 |
 | Log to tg_mirror.log | RotatingFileHandler, 5 MB × 3 | Yes |
+| Experimental fast mode | Increases copy speed | No |
+| Experimental parallel topics | Simultaneously copying topics | No |
+| Parallel topic workers | Number of topics processed simultaneously | 3 |
+| Language | Supported languages: en, ru, zh, es, de | en |
 
 ---
 
@@ -204,3 +210,5 @@ with topic management rights.
 
 **`FloodWaitError`** — Telegram asks you to wait. The program pauses automatically.
 If errors occur frequently, increase delays in Settings.
+
+**`Infinite connection`** — There's a problem with your internet connection. Try using a VPN (especially for Russia).
